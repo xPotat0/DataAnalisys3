@@ -34,7 +34,12 @@
  - Реализовать систему машинного обучения в связке Python - Google-Sheets – Unity. 
 
 ## Ход работы:
-- Создадим новый 3D файл в unity. 
+- Создадим новый 3D проект в unity. После этого перейдём во вкладку Window - Package Manager. В появившемся окне нажмём на "+" - Add package from disk... - и выберем пакеты JSON, который мы заранее установили(Все вспомогательные файлы могут быть найдены в текущем репозитории). Установим пакеты из папок:
+    - o	ml-agents-release_19 / com,unity.ml-agents / package.json
+    - o	ml-agents-release_19 / com,unity.ml-agents.extensions / package.json
+- ![1](https://user-images.githubusercontent.com/106258306/196661186-abd97982-c960-4827-9ef1-b756fbc86e57.png)
+
+
 
 ## Вывод:
 
