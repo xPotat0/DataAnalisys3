@@ -151,5 +151,12 @@ public class RollerAgent : Agent
 
 ```
 
+- У шара, в компоненте скрипт, появился экземпляр Target. Перетащим туда наш куб.
+
+![11](https://user-images.githubusercontent.com/106258306/196693581-5b690d16-e626-4ac1-a92f-da38a52be834.png)
+
+- Добавим шару новый компонент Desicion Requester. Изменим параметр Decision perioud на 10
+- Добавим шару новый компонент Behaviour Parameters. Изменим параметр Behaviour name на "RollerBall", Space size на 8, Continuous action на 2
+
 ## Вывод:
 
