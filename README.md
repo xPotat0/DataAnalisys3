@@ -43,7 +43,7 @@
 ![2](https://user-images.githubusercontent.com/106258306/196662350-faccacde-4a5e-4f7b-b9f3-280b69bbe1d7.png)
 - Теперь запустим командную строку Anaconda в режиме Администратора.
 - В строке напишем следующую команду:
-###conda create -n MLAgent python=3.10.6
+"conda create -n MLAgent python=3.10.6"
 - Если всё было выполнено верно, то появится следующие сообщение
 ![3](https://user-images.githubusercontent.com/106258306/196669654-49eab959-7717-4889-be61-bc1b3aeaf44d.png)
 
