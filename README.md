@@ -185,5 +185,9 @@ behaviors:
     summary_freq: 10000
 ```
 
+- Перейдём в командную строку и введём команду
+mlagents-learn rollerball_config.yaml --run-id=RollerBall --resume
+- После этого введём команду
+mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
 ## Вывод:
 
