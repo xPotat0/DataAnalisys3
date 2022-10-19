@@ -79,6 +79,11 @@
 
 ![8](https://user-images.githubusercontent.com/106258306/196685398-bc792f67-29b9-4eb7-9f3d-e18b17c6bc33.png)
 
+- Создадим пустой объект и назовём его TargetArea. "Перетащим" объекты Floor, Target, RollerAgent в пустой объект.
+
+![9](https://user-images.githubusercontent.com/106258306/196686505-93a99624-7986-41c0-a5fd-03a332ec4a5d.png)
+
+
 
 ## Вывод:
 
