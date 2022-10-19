@@ -35,9 +35,12 @@
 
 ## Ход работы:
 - Создадим новый 3D проект в unity. После этого перейдём во вкладку Window - Package Manager. В появившемся окне нажмём на "+" - Add package from disk... - и выберем пакеты JSON, который мы заранее установили(Все вспомогательные файлы могут быть найдены в текущем репозитории). Установим пакеты из папок:
-    - o	ml-agents-release_19 / com,unity.ml-agents / package.json
-    - o	ml-agents-release_19 / com,unity.ml-agents.extensions / package.json
-- ![1](https://user-images.githubusercontent.com/106258306/196661186-abd97982-c960-4827-9ef1-b756fbc86e57.png)
+    - ml-agents-release_19 / com,unity.ml-agents / package.json
+    - ml-agents-release_19 / com,unity.ml-agents.extensions / package.json
+![1](https://user-images.githubusercontent.com/106258306/196661186-abd97982-c960-4827-9ef1-b756fbc86e57.png)
+- После успешной установки можно закрыть окно управления пакетами. Если они были установлены верно, то во вкладке Component добавится ML agent.
+![2](https://user-images.githubusercontent.com/106258306/196662350-faccacde-4a5e-4f7b-b9f3-280b69bbe1d7.png)
+
 
 
 
