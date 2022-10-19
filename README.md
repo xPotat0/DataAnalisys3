@@ -38,8 +38,14 @@
     - ml-agents-release_19 / com,unity.ml-agents / package.json
     - ml-agents-release_19 / com,unity.ml-agents.extensions / package.json
 ![1](https://user-images.githubusercontent.com/106258306/196661186-abd97982-c960-4827-9ef1-b756fbc86e57.png)
-- После успешной установки можно закрыть окно управления пакетами. Если они были установлены верно, то во вкладке Component добавится ML agent.
+- После успешной установки можно закрыть окно управления пакетами. 
+- Если они были установлены верно, то во вкладке Component добавится ML agent.
 ![2](https://user-images.githubusercontent.com/106258306/196662350-faccacde-4a5e-4f7b-b9f3-280b69bbe1d7.png)
+- Теперь запустим командную строку Anaconda в режиме Администратора.
+- В строке напишем следующую команду:
+###conda create -n MLAgent python=3.10.6
+- Если всё было выполнено верно, то появится следующие сообщение
+![3](https://user-images.githubusercontent.com/106258306/196669654-49eab959-7717-4889-be61-bc1b3aeaf44d.png)
 
 
 
