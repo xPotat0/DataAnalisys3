@@ -51,7 +51,9 @@
 
 ![4](https://user-images.githubusercontent.com/106258306/196670864-da9b7098-1bf6-4f40-9d26-c1aa0c39aa1a.png)
 
-- Теперь установим в python необходимые элементы. Для этого введём команду: "pip install mlagents==0.28.0"
+- Теперь установим в python необходимые элементы. 
+- Введём команду: "pip install mlagents==0.28.0"
+- Введём команду: "pip install "pip install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html"
 - После установки будет выведено сообщение о успешно установленных пакетах.
 
 
