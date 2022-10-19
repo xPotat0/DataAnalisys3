@@ -67,6 +67,12 @@
 
 ![6](https://user-images.githubusercontent.com/106258306/196683730-2d89caeb-6da8-433a-9a59-7380e56f6f03.png)
 
+- Создадим Folder и назовём его material. Для этого на панели, снизу от сцены, нажмём ПКМ - create - Folder.
+- Перейдем в папку и создадим в ней новый материал. Для этого нажмём ПКМ - Create - Material
+
+![7](https://user-images.githubusercontent.com/106258306/196684272-9592fabe-e7b6-48d4-8fee-715c7412d495.png)
+
+- 
 
 ## Вывод:
 
