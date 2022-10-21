@@ -208,7 +208,21 @@ mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
 
 ![15](https://user-images.githubusercontent.com/106258306/197211504-d06f5752-2ce8-4e12-bd7d-ead597430c92.png)
 
--Остановим сцену.
+- Остановим сцену. Зайдём в папку с проектом, перейдём в папку result и возьмём оттуда файл с названием RollerBall.onnx. Скопируем его.
+
+![16](https://user-images.githubusercontent.com/106258306/197223245-4726e636-3a25-4a87-9f4d-dc36239c7791.png)
+
+- Вставим файл в папку Assets нашего проекта. Перейдём в Unity. Уберём все зоны, кроме одной(Удалить или выбрать ненужную зону и в правом меню убрать галочку с и инспектора).
+
+![17](https://user-images.githubusercontent.com/106258306/197224140-57a54861-b270-40fa-9d43-f51d41ff2b83.png)
+
+- Выберем в оставшейся зоне RollerAgent. В компоненте Behaviour Parameters установим настройку Model. Перетащим наш файл RollerBall.onnx, который мы скопировали ранее в папку assets, и перетащим его в Model.
+-  Установим настройку Inference Device = CPU.
+-  Установим настройку Behavior Type = Inference Only.
+
+![18](https://user-images.githubusercontent.com/106258306/197225215-0f513d76-8809-41d6-9449-18bc9e75384b.png)
+
+- Запустим проект. Теперь шар катается в зоне пола(Floor) и меняет траекторию в зависимости от места, где оказался куб(Target).
 
 ## Вывод:
 
