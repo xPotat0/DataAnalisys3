@@ -223,6 +223,7 @@ mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
 ![18](https://user-images.githubusercontent.com/106258306/197225215-0f513d76-8809-41d6-9449-18bc9e75384b.png)
 
 - Запустим проект. Теперь шар катается в зоне пола(Floor) и меняет траекторию в зависимости от места, где оказался куб(Target).
+#### Мы реализовали машинное обучение
 
 ## Вывод:
 
