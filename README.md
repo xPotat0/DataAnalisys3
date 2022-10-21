@@ -43,19 +43,34 @@
 ![2](https://user-images.githubusercontent.com/106258306/196662350-faccacde-4a5e-4f7b-b9f3-280b69bbe1d7.png)
 - Теперь запустим командную строку Anaconda в режиме Администратора.
 - В строке напишем следующую команду:
-"conda create -n MLAgent python=3.10.6"
+"
+```python
+conda create -n MLAgent python=3.10.6
+```
 - Если всё было выполнено верно, то появится следующие сообщение
 ![3](https://user-images.githubusercontent.com/106258306/196669654-49eab959-7717-4889-be61-bc1b3aeaf44d.png)
 - Напишем команду "y". Теперь в консоли покажутся следующие две команды: активация и дезактивация MLAgnet. 
-Активируем MLAgent соответствующей командой: conda activate MLagent
+Активируем MLAgent соответствующей командой:
+```python
+conda activate MLagent
+```
 
 ![4](https://user-images.githubusercontent.com/106258306/196670864-da9b7098-1bf6-4f40-9d26-c1aa0c39aa1a.png)
 
 - Теперь установим в python необходимые элементы. 
-- Введём команду: "pip install mlagents==0.28.0"
-- Введём команду: "pip install "pip install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html"
+- Введём команду:
+```python
+pip install mlagents==0.28.0
+```
+- Введём команду:
+```python
+pip install "pip install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
+```
 - После установки будет выведено сообщение о успешно установленных пакетах.
-- Перейдём в unity. Скопируем путь местонахождения проекта. После этого выполним команду: "cd C:\Users\111\MLAtest"
+- Перейдём в unity. Скопируем путь местонахождения проекта. После этого выполним команду:
+```python
+"cd C:\Users\111\MLAtest"
+```
 - Создадим в сцене панель и куб. Назовём их соответственно Floor и Target. Для создания объекта в unity нужно нажать ПКМ в обозреватель(он находится слева от сцены), выбрать пункт Create 3D и выбрать нужный объект.
 - Зададим кубу координаты 3, 0.5, 3. Чтобы это сделать выделим куб и справа от сцены, в меню настройки, введём параметры position.
 
@@ -186,7 +201,9 @@ behaviors:
 ```
 
 - Перейдём в командную строку и введём команду
+```python
 mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
+```
 
 - После выполнения мы увидем в консоли следующие
 
@@ -198,7 +215,10 @@ mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
 
 ![13](https://user-images.githubusercontent.com/106258306/197209399-e22f86f0-72fa-4f0d-a4b5-7ba3dda391e4.png)
 
-- Теперь запустим программу mlagents-learn rollerball_config.yaml --run-id=RollerBall --resume
+- Теперь запустим программу
+```python
+mlagents-learn rollerball_config.yaml --run-id=RollerBall --resume
+```
 - Теперь, когда зон стало больше, стало выполняться большие кол-во операций.
 - Увеличим кол-во зон до 9. Возобновим запись и запустим сцену.
 
