@@ -208,5 +208,7 @@ mlagents-learn rollerball_config.yaml --run-id=RollerBall --force
 
 ![15](https://user-images.githubusercontent.com/106258306/197211504-d06f5752-2ce8-4e12-bd7d-ead597430c92.png)
 
+-Остановим сцену.
+
 ## Вывод:
 
