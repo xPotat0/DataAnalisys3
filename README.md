@@ -252,5 +252,21 @@ mlagents-learn rollerball_config.yaml --run-id=RollerBall --resume
 |Название|Описание|
 |-----|-----|
 |trainer_type|Задаёт тип используемого тренера. По умолчанию "ppo". Возможны варианты "ppo", "sac", "poca"|
+|hyperparameters->batch_size||
+|hyperparameters->buffer_size||
+|hyperparameters->learning_rate||
+|hyperparameters->beta||
+|hyperparameters->epsilon||
+|hyperparameters->lambd||
+|hyperparameters->num_epoch||
+|hyperparameters->learning_rate_schedule||
+|network_settings->normalize||
+|network_settings->hidden_units||
+|network_settings->num_layers||
+|reward_signals->extrinsic->gamma||
+|reward_signals->extrinsic->strength||
+|max_steps||
+|time_horizon||
+|summary_freq||
 ## Вывод:
 
