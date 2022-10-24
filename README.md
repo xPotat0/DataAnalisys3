@@ -277,9 +277,86 @@ mlagents-learn rollerball_config.yaml --run-id=RollerBall --resume
 |Behaviors Parameters|Компонент для настройки поведения экземпляра агента и свойств мозга. Во время выполнения этот компонент генерирует объекты политики агента в соответствии с настройками, указанными в редакторе.|
 
 ## Задание 3
-- Дополнить проект так, чтобы шар научился кататься в точку между двумя кубами.
+- Доработать сцену и обучить ML-Agent таким образом, чтобы шар перемещался между двумя кубами разного цвета. Кубы должны, как и в первом задании, случайно изменять координаты на плоскости. 
 ### Ход работы:
+- Переименуем первый, зелёный куб. Назовём его "Target_1"
+- Создадим новый куб и поместим его над плоскоостью Floor. Зададим ему координаты 3.0, 0.5, -3.0 и имя "Target_2".
 
+![21](https://user-images.githubusercontent.com/106258306/197496639-bffcd6eb-db1d-4694-b81e-9c3254298b29.png)
+
+- Создадим новый материал синего цвета и "перетащим" его на новый куб.
+- Релузьтатом должен стать следующий вид сцены:
+
+![19](https://user-images.githubusercontent.com/106258306/197496792-813dcb0b-b840-4e11-af16-abae6b2d79ba.png)
+
+- Модернизируем наш скрипт у шара.
+
+```c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Unity.MLAgents;
+using Unity.MLAgents.Sensors;
+using Unity.MLAgents.Actuators;
+
+public class RollerAgent : Agent
+{
+    Rigidbody rBody;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rBody = GetComponent<Rigidbody>();
+    }
+
+    public Transform Target_1;
+    public Transform Target_2;
+    public override void OnEpisodeBegin()
+    {
+        if (this.transform.localPosition.y < 0)
+        {
+            this.rBody.angularVelocity = Vector3.zero;
+            this.rBody.velocity = Vector3.zero;
+            this.transform.localPosition = new Vector3(0, 0.5f, 0);
+        }
+
+        Target_1.localPosition = new Vector3(Random.value * 8-4, 0.5f, Random.value * 8-4);
+        Target_2.localPosition = new Vector3(Random.value * 8-4, 0.5f, Random.value * 8-4);
+        while(Vector3.Distance(Target_1.localPosition, Target_2.localPosition) <= 2)
+        {
+            Target_1.localPosition = new Vector3(Target_1.position.x+0.5f, 0.5f, Target_1.position.z+0.5f);
+            Target_2.localPosition = new Vector3(Target_2.position.x-0.5f, 0.5f, Target_2.position.z-0.5f);
+        }
+    }
+    public override void CollectObservations(VectorSensor sensor)
+    {
+        sensor.AddObservation(Target_1.localPosition);
+        sensor.AddObservation(Target_2.localPosition);
+        sensor.AddObservation(this.transform.localPosition);
+        sensor.AddObservation(rBody.velocity.x);
+        sensor.AddObservation(rBody.velocity.z);
+    }
+    public float forceMultiplier = 10;
+    public override void OnActionReceived(ActionBuffers actionBuffers)
+    {
+        Vector3 controlSignal = Vector3.zero;
+        controlSignal.x = actionBuffers.ContinuousActions[0];
+        controlSignal.z = actionBuffers.ContinuousActions[1];
+        rBody.AddForce(controlSignal * forceMultiplier);
+
+        float distanceToTarget_1 = Vector3.Distance(this.transform.localPosition, (Target_1.localPosition - Target_2.localPosition)/2);
+
+        if(distanceToTarget_1 < 1.42f)
+        {
+            SetReward(1.0f);
+            EndEpisode();
+        }
+        else if (this.transform.localPosition.y < 0)
+        {
+            EndEpisode();
+        }
+    }
+}
+```
 
 ## Вывод:
 Что есть игровой баланс? Как его достичь? Прежде всего попытаемся дать определение, что такое игровой баланс и как его могут воспринимать разные игроки.
